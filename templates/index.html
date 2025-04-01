@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Stats API</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    h1 { color: #2c3e50; }
+    code { background-color: #f4f4f4; padding: 4px; border-radius: 4px; }
+    pre { background-color: #f4f4f4; padding: 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>📈 Stock Stats API</h1>
+  <p>This API returns key technical indicators and stats for a given stock symbol using Yahoo Finance data.</p>
+
+  <h2>📡 Endpoint</h2>
+  <p><code>GET /api/v1/stats?symbol=XYZ</code></p>
+
+  <h2>🔍 Parameters</h2>
+  <ul>
+    <li><strong>symbol</strong>: Stock ticker symbol (e.g., <code>AAPL</code>, <code>TSLA</code>)</li>
+  </ul>
+
+  <h2>🧪 Example</h2>
+  <p><a href="/api/v1/stats?symbol=AAPL">/api/v1/stats?symbol=AAPL</a></p>
+
+  <h2>📦 Example Response</h2>
+  <pre><code>{
+  "symbol": "AAPL",
+  "price": 172.45,
+  "ma_10": 170.92,
+  "ma_20": 169.84,
+  "ma_50": 165.33,
+  "correlation_to_SPY": 0.91,
+  "rsi": 58.23,
+  "macd": {
+    "macd": 1.45,
+    "signal": 1.21,
+    "histogram": 0.24
+  }
+}</code></pre>
+
+  <footer>
+    <p style="font-size: 0.9em; color: #888;">Built with Flask · Data from Yahoo Finance</p>
+  </footer>
+</body>
+</html>
